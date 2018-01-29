@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <Button
+        android:id="@+id/btn_startfragment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAllCaps="false"
+        android:text="@string/startfragment"/>
+
+    <Button
+        android:id="@+id/btn_startfragmentforresult"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAllCaps="false"
+        android:text="@string/startfragmentforresult"/>
+
+    <Button
+        android:id="@+id/btn_replacefragment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAllCaps="false"
+        android:text="@string/replacefragment"/>
+
+    <Button
+        android:id="@+id/btn_showfragment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAllCaps="false"
+        android:text="@string/showfragment"/>
+
+    <Button
+        android:id="@+id/btn_lazyload"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAllCaps="false"
+        android:text="@string/lazyload"/>
+
+</LinearLayout>

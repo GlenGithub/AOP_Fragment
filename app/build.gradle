@@ -1,0 +1,34 @@
+apply plugin: 'com.android.application'
+apply plugin: 'android-aspectjx'
+apply plugin: 'com.neenbedankt.android-apt'
+
+android {
+    compileSdkVersion 26
+    buildToolsVersion "26.0.1"
+    defaultConfig {
+        applicationId "com.aop.fragment"
+        minSdkVersion 15
+        targetSdkVersion 26
+        versionCode 1
+        versionName "1.0"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    compile 'com.android.support:appcompat-v7:26.+'
+    // compile 'com.android.support:support-v4:26.0.0-alpha1'
+    compile 'com.justkiddingbaby:fragment-rigger:1.1.1'
+    //RxJava
+    compile 'io.reactivex.rxjava2:rxjava:2.1.9'
+    //butterKnife
+    compile 'com.jakewharton:butterknife:8.0.1'
+    apt 'com.jakewharton:butterknife-compiler:8.0.1'
+    compile 'com.android.support:design:26.0.0-alpha1'
+}

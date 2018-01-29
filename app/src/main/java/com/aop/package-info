@@ -1,0 +1,22 @@
+https://github.com/JustKiddingBaby/FragmentRigger/blob/master/README-CN.md
+
+如何在library module中使用
+在application的module中，我们可以使用注解来声明一些变量，但是在library的module中，R中的数据并不是最终常亮，所以本框架提供的一些注解就不可以传入值了。
+
+为了解决这种问题，本框架提供了Api支持。
+
+@Puppet中的containerViewId
+在你需要使用的Fragment中添加如下方法：
+
+public int getContainerViewId(){
+  return R.id.container;
+}
+@Animator中四个参数
+在你需要使用Fragment转场动画中添加如下方法：
+
+public int[] getPuppetAnimations(){
+  return new int[]{
+    R.anim.enter,R.anim.exit,R.anim.popEnter,R.anim.popExit
+  };
+}
+注意：在getPuppetAnimations方法的返回参数必须是一个长度为4的int数组，这四个值分别对应此注解中的四个参数，如果不需要相应的转场动画，请把相应位置的值置为0。
